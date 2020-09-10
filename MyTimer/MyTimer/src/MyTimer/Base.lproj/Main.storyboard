@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Rx-zM-2Cj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="iER-Jj-4wL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be1-8I-34O">
+                                <rect key="frame" x="57" y="478" width="140" height="140"/>
+                                <state key="normal" image="btn_start"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ETp-O0-w7A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-6Q-D7T">
+                                <rect key="frame" x="217" y="478" width="140" height="140"/>
+                                <state key="normal" image="btn_stop"/>
+                                <connections>
+                                    <action selector="stopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUQ-zS-S5N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJF-3A-C7H">
+                                <rect key="frame" x="171.5" y="330" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5pi-qp-P1X"/>
+                            <constraint firstItem="Be1-8I-34O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="DBK-ZW-Qrv"/>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LFB-5M-S35"/>
+                            <constraint firstItem="o8X-6Q-D7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="UGp-25-WFD"/>
+                            <constraint firstItem="XJF-3A-C7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjk-xz-HOf"/>
+                            <constraint firstAttribute="bottom" secondItem="iER-Jj-4wL" secondAttribute="bottom" id="XeC-GK-7Aq"/>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bfd-Md-dYk"/>
+                            <constraint firstItem="XJF-3A-C7H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="efj-K5-y6g"/>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="idS-lt-zju"/>
+                            <constraint firstItem="Be1-8I-34O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="lM9-6s-I57"/>
+                            <constraint firstAttribute="bottom" secondItem="iER-Jj-4wL" secondAttribute="bottom" id="mxh-2I-J0d"/>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nVz-ao-ZD2"/>
+                            <constraint firstItem="iER-Jj-4wL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o1s-5h-sGJ"/>
+                            <constraint firstItem="o8X-6Q-D7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="yCd-4a-woX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Qk-Le-ztT">
+                        <barButtonItem key="rightBarButtonItem" title="秒数設定" id="vrb-Od-wD6">
+                            <connections>
+                                <action selector="settingButtonAction:" destination="BYZ-38-t0r" id="pqb-7H-aVW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countDownLabel" destination="XJF-3A-C7H" id="yzN-ib-MUC"/>
+                        <segue destination="yiY-k7-jej" kind="show" identifier="goSetting" id="htB-b3-j32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="110"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="5um-NP-Vfw">
+            <objects>
+                <viewController id="yiY-k7-jej" customClass="SettingViewController" customModule="MyTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XRH-sh-1gq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-t0-6KD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdd-7K-j6g">
+                                <rect key="frame" x="147" y="488" width="120" height="120"/>
+                                <state key="normal" image="btn_ decision"/>
+                                <connections>
+                                    <action selector="decisionButtonAction:" destination="yiY-k7-jej" eventType="touchUpInside" id="xiT-oH-2Jc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bRA-t0-6KD" firstAttribute="trailing" secondItem="YaP-H5-IYQ" secondAttribute="trailing" id="3hH-SH-6id"/>
+                            <constraint firstItem="wdd-7K-j6g" firstAttribute="centerX" secondItem="XRH-sh-1gq" secondAttribute="centerX" id="VcT-zv-ZQe"/>
+                            <constraint firstItem="wdd-7K-j6g" firstAttribute="centerY" secondItem="XRH-sh-1gq" secondAttribute="centerY" constant="100" id="WAw-Q3-bSv"/>
+                            <constraint firstItem="bRA-t0-6KD" firstAttribute="leading" secondItem="YaP-H5-IYQ" secondAttribute="leading" id="jup-fr-mPL"/>
+                            <constraint firstItem="bRA-t0-6KD" firstAttribute="top" secondItem="YaP-H5-IYQ" secondAttribute="top" id="qDd-bA-3Xn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YaP-H5-IYQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0iB-TP-O5i"/>
+                    <connections>
+                        <outlet property="timerSettingPicker" destination="bRA-t0-6KD" id="33x-mI-hpd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctJ-zS-mpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rng-2G-Ne6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Rx-zM-2Cj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1W5-G9-tqL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0b6-Cb-hnn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6T-to-XBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="750" height="1334"/>
+        <image name="btn_ decision" width="120" height="120"/>
+        <image name="btn_start" width="140" height="140"/>
+        <image name="btn_stop" width="140" height="140"/>
+    </resources>
+</document>
